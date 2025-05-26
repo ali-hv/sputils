@@ -125,8 +125,7 @@ src/
 
 ## **🧩 Planned Features**
 
-* Generate stub classes (e.g., UserController.java, UserService.java, etc.)
-* Support for test folder generation
+* Add annotations to stub classes.
 * Add dto, mapper, or service separately with future commands (e.g. sputils makedto)
 * Configuration via .sputilsrc file
 
