@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCRIPT_NAME="sputils"
+DEST="/usr/local/bin/$SCRIPT_NAME"
+
+echo "🗑️ Uninstalling $SCRIPT_NAME ..."
+
+if [ -f "$DEST" ]; then
+  sudo rm "$DEST"
+  echo "✅ Removed $DEST"
+else
+  echo "⚠️ $SCRIPT_NAME is not installed in $DEST"
+fi

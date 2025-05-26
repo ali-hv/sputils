@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SCRIPT_NAME="sputils"
+DEST="/usr/local/bin/$SCRIPT_NAME"
+
+if [ ! -f "$SCRIPT_NAME" ]; then
+  echo "❌ Error: '$SCRIPT_NAME' script not found in current directory."
+  exit 1
+fi
+
+echo "📥 Installing $SCRIPT_NAME to $DEST ..."
+chmod +x "$SCRIPT_NAME"
+sudo cp "$SCRIPT_NAME" "$DEST"
+
+if command -v $SCRIPT_NAME >/dev/null 2>&1; then
+  echo "✅ Installed successfully. Try running: $SCRIPT_NAME help"
+else
+  echo "⚠️ Something went wrong. $SCRIPT_NAME is not available in PATH."
+fi

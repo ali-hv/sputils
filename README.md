@@ -12,27 +12,18 @@ It follows the **package-by-feature** design pattern — organizing code into co
 
 ## **🚀 Getting Started**
 
-### **1. Clone or Copy the Script**
+### **1. Clone the repository**
 
-Download or copy the sputils Bash script and place it in your project root or somewhere in your $PATH.
-
-Make it executable:
 ```bash
-chmod +x sputils
+git clone https://github.com/ali-hv/sputils.git
 ```
 
-Optionally move it globally:
-```bash
-sudo mv sputils /usr/local/bin/sputils
-```
+### **2. Install**
 
-### **2. Configure Your Base Package**
-
-In the script, set your Java base package and source path at the top:
+Install the **sputils** by running the install script:
 ```bash
-# sputils 
-BASE_PACKAGE="com.example.project"  # 🔁 Change to match your project package 
-SRC_PATH="src/main/java"
+chmod +x install
+./install
 ```
 
 ## **⚙️ Usage**
@@ -43,7 +34,7 @@ sputils <command> [options]
 
 ### **Available Commands:**
 
-#### `startapp <feature-name>`
+#### `startapp <feature-name> [options]`
 
 Scaffold a new feature module with the following structure:
 
@@ -74,7 +65,43 @@ src/main/java/com/example/project/user/
 └── service/
 ```
 
-Each folder includes a `.gitkeep` file to preserve directory structure.
+You can also send the --gen-classes argument to create a java stub for each layer:
+
+### **Example:**
+
+```bash
+sputils startapp user --gen-classes
+```
+
+Creates:
+```
+src/main/java/com/example/project/user/
+├── controller/
+|──── UserController.java
+├── dto/
+|──── UserDto.java
+├── entity/
+|──── UserEntity.java
+├── mapper/
+|──── UserMapper.java
+├── repository/
+|──── UserRepository.java
+└── service/
+|──── UserService.java
+```
+
+And there is a sample code in generated java files:
+
+```java
+// UserController.java
+
+package com.example.project.user.controller;
+
+public class UserController {
+    // TODO: implement UserController
+}
+```
+
 
 ## **📁 Example Project Layout**
 
