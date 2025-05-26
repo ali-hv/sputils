@@ -105,7 +105,7 @@ src/
 
 ## **🧑‍💻 License**
 
-MIT — feel free to copy, modify, and use in any Spring Boot project.
+GPL-3.0 — You are free to use, modify, and distribute this project, provided that any derivative work is also licensed under the GPL-3.0.
 
 ## **🤝 Contributions**
 
